@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*Using Grid for the Home Page*/
+.HomeContainer{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 3vmin;
+  /*overflow-x: scroll;*/
+  background-color: #fcf9f5;
+}
+
+/*Styling the logo*/
+.homelogo{
+  padding: .8rem;
+  color: #fcf9f5;
+  background-color: #BA719C;
+}
+
+/*Stying the NavBar*/
+.TopNav {
+  width: 100%;
+  grid-column: 1/3;
+  height: 6vmin;
+  font-family: 'DM Serif Display', serif;
+  font-size: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 3vmin 5vmin 0 5vmin;
+}
+
+/*Styling the menu link*/
+.TopNav a {
+  text-decoration: none;
+}
+
+/*Styling the menu link on hover*/
+.TopNav a:hover {
+  font-style: italic;
+}
+
+/*Styling the banner image and arranging the title*/
+.HomeBanner {
+  width: 100%;
+  grid-column: 1/3;
+  background-size: cover;
+  height: 70vmin;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('https://dbkpop.com/wp-content/uploads/2021/03/blackpink_rose_r_on_the_ground_concept_2.jpg');
+}
+
+/*Styling the title*/
+.Title {
+  font-family: 'DM Serif Display', serif;
+  color: #fcf9f5;
+  font-size: 14vmin;
+}
+
+.row {
+  grid-column: 1/3;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/*Styling the body texts*/
+.Text1 p {
+  grid-column: 1/2;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2vmin;
+  line-height: 2.3em;
+  text-align: justify;
+  color: #7c53a6;
+}
+
+/*Changing the padding*/
+.Text1, .HomeImg2, .HomeImg3, .spotify {
+  padding: 5vmin 10vmin 10vmin 13vmin;
+}
+
+/*Styling "Who is Rosé?"*/
+.Text1 h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 8vmin;
+  color: #7c53a6;
+  font-style: italic;
+  margin: 0;
+  padding: 6vmin 0 2vmin 0;
+}
+
+/*Adding more space between rows*/
+.Text1, .HomeImg2 {
+  padding-top: 4vmin;
+}
+
+/*Styling the posters*/
+.HomeImg2 img {
+  height: 50vmin;
+  width: 70vmin;
+  object-fit: cover;
+}
+
+.HomeImg3 img {
+  height: 70vmin;
+  width: 70vmin;
+  object-fit: cover;
+}
+
+/*Changing the size of the Spotify playlist*/
+.spotify iframe {
+  height: 50vmin;
+  width: 70vmin;
+}
+
+/*Aligning the posters*/
+.HomeImg2, .spotify, .HomeImg3 {
+  justify-self: center;
+  align-self: center;
+}
+
+/*Arranging the buttons*/
+#buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*Styling the buttons*/
+#buttons a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2vmin;
+  color: #fcf9f5;
+  background-color: #7c53a6;
+  text-decoration: none;
+  padding: 2vmin 6vmin 2vmin 6vmin;
+}
+
+/*Styling the buttons on hover*/
+#buttons a:hover {
+  background-color: #C48DCF;
+  color: #fcf9f5;
+}
+
+/*Adding space between the buttons and text*/
+#buttons{
+  padding-top: 2vmax;
+}
+
+/*Styling the Source text and links*/
+.Source, .Source a {
+  grid-column: 1/3;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2vmin;
+  color:#b099bf;
+  text-decoration: none;
+  text-align: center;
+}
+
+/*Styling the source links on hover*/
+.Source a:hover {
+  text-decoration: underline;
+}
+
+/*Changing the color of the texts*/
+.homemenubutton {
+  color: #BA719C;
+}
+
+/* Media query for mobile phones (screens 600px or less) */
+@media screen and (max-width: 600px) {
+
+  .HomeContainer {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  /*Styling the logo*/
+  .homelogo{
+    padding: .8rem;
+    color: #fcf9f5;
+    background-color: #BA719C;
+  }
+
+  /*Stying the NavBar*/
+  .TopNav {
+    height: 8vmin;
+    font-size: 1.5em;
+    padding: 3vmin 5vmin 0 5vmin;
+  }
+
+  .HomeBanner {
+    width: 100%;
+  }
+
+  .row {
+    grid-column: 1/3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .Text1, .HomeImg2 {
+    padding-top: 0;
+  }
+
+  .HomeImg2 img, .HomeImg3 img, .spotify iframe{
+    width: 80vmin;
+    padding: 0;
+  }
+
+}
